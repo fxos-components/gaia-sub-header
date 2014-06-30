@@ -1,11 +1,11 @@
 
 gaia-subheader {
   display: block;
-  padding: 0.8rem 3rem;
-  border-bottom: solid 0.1rem #e6e6e6;
+  padding: 8px 30px;
+  border-bottom: solid 1px #e6e6e6;
   color: #424242;
-  font-size: 1.5rem;
-  line-height: 1.8rem;
+  font-size: 15px;
+  line-height: 18px;
 }
 
 /* -----------------------------------------------------------------
