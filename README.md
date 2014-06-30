@@ -1,11 +1,11 @@
-# &lt;gaia-toolbar&gt;
+# &lt;gaia-subheader&gt;
 
 ## Installation
 
 ```bash
-$ bower install gaia-components/gaia-toolbar
+$ bower install gaia-components/gaia-subheader
 ```
 
 ## Examples
 
-- [Example](http://gaia-components.github.io/gaia-toolbar/examples/)
+- [Example](http://gaia-components.github.io/gaia-subheader/examples/)
