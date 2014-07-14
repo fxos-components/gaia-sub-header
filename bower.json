@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "homepage": "https://github.com/gaia-components/gaia-subheader",
   "authors": [
-    "rnowm <arnau@arnaumarch.com>"
+    "rnowm <arnau@arnaumarch.com>",
+    "Wilson Page <wilsonpage@me.com>"
   ],
-  "main": "script.js",
+  "main": "gaia-subheader.html",
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -13,8 +14,5 @@
     "bower_components",
     "test",
     "tests"
-  ],
-  "dependencies": {
-    "gaia-component-utils": "gaia-components/gaia-component-utils#~0.1.0"
-  }
+  ]
 }

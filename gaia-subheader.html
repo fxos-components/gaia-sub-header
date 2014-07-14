@@ -1,0 +1,36 @@
+
+<template id="template">
+  <style>
+    .host {
+      display: block;
+      padding: 8px 30px;
+      border-bottom: solid 1px #e6e6e6;
+      color: #424242;
+      font-size: 15px;
+      line-height: 18px;
+    }
+  </style>
+  <content></content>
+</template>
+
+<script>
+var proto = Object.create(HTMLElement.prototype);
+var thisDoc = document.currentScript.ownerDocument;
+var template = thisDoc.getElementById('template');
+
+proto.createdCallback = function() {
+  var root = this.createShadowRoot();
+  var html = template.content.cloneNode(true);
+  root.appendChild(html);
+  this.configureStyle();
+};
+
+proto.configureStyle = function() {
+  var style = this.shadowRoot.querySelector('style').cloneNode(true);
+  this.classList.add('content', 'host');
+  style.setAttribute('scoped', '');
+  this.appendChild(style);
+};
+
+document.registerElement('gaia-subheader', { prototype: proto });
+</script>
