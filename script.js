@@ -34,8 +34,30 @@ var proto = Object.create(HTMLElement.prototype);
  * @private
  */
 proto.createdCallback = function() {
+  var tmpl = template.content.cloneNode(true);
+  var shadow = this.createShadowRoot();
+
+  this.inner = tmpl.firstElementChild;
+  shadow.appendChild(tmpl);
   utils.style.call(this, stylesheets);
 };
+
+// HACK: Create a <template> in memory at runtime.
+// When the custom-element is created we clone
+// this template and inject into the shadow-root.
+// Prior to this we would have had to copy/paste
+// the template into the <head> of every app that
+// wanted to use <gaia-switch>, this would make
+// markup changes complicated, and could lead to
+// things getting out of sync. This is a short-term
+// hack until we can import entire custom-elements
+// using HTML Imports (bug 877072).
+var template = document.createElement('template');
+template.innerHTML = '<h2 class="inner">' +
+    '<div class="flex"><div></div></div>' +
+    '<div class="text"><content></content></div>' +
+    '<div class="flex"><div></div></div>' +
+  '</h2>';
 
 // Register and return the constructor
 module.exports = document.registerElement('gaia-subheader', { prototype: proto });
