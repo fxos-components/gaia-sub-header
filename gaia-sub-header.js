@@ -40,9 +40,12 @@ gaia-sub-header {
 
 .line {
   position: relative;
-  background: var(--color-zeta);
-  height: 1px;
+  height: 2px;
   flex: 1;
+
+  background:
+    var(--border-color,
+    var(--background-plus));
 }
 
 .middle {
