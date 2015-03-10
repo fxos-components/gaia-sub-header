@@ -32,8 +32,7 @@ module.exports = component.register('gaia-sub-header', {
 
     .inner {
       display: flex;
-      margin: 30px 0 16px;
-      padding: 0 15px;
+      margin: 16px 0 16px 16px;
       align-items: center;
     }
 
