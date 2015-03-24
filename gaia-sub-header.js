@@ -54,7 +54,7 @@ module.exports = component.register('gaia-sub-header', {
       font-weight: normal;
 
       color:
-        var(--color-epsilon);
+        var(--title-color);
     }
 
     a,
