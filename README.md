@@ -12,7 +12,7 @@ Then include folowing files in HTML
 
 ```html
 <script src="bower_components/gaia-switch/gaia-sub-header.js"></script>
-`
+```
 
 
 ## Examples
