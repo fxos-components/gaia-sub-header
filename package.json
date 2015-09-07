@@ -5,9 +5,7 @@
   "license": "MIT",
   "main": "gaia-sub-header.js",
   "devDependencies": {
-    "babel": "^5.2.12",
     "bower": "^1.4.1",
-    "browserify": "^10.1.0",
     "jshint": "^2.7.0",
     "karma": "^0.12.31",
     "karma-firefox-launcher": "^0.1.4",
@@ -17,10 +15,7 @@
   },
   "scripts": {
     "install": "bower install",
-    "lint": "./node_modules/jshint/bin/jshint gaia-sub-header.js",
-    "bundle": "mkdir -p dist && browserify gaia-sub-header.js --outfile ./dist/gaia-sub-header.js --standalone GaiaSubHeader",
-    "es5": "mkdir -p dist && babel ./dist/gaia-sub-header.js --out-file ./dist/gaia-sub-header-es5.js",
-    "build": "npm run bundle && npm run es5"
+    "lint": "./node_modules/jshint/bin/jshint gaia-sub-header.js"
   },
   "repository": {
     "type": "git",
@@ -28,8 +23,5 @@
   },
   "bugs": {
     "url": "https://github.com/gaia-components/gaia-sub-header/issues"
-  },
-  "browser": {
-    "gaia-component": "./bower_components/gaia-component/gaia-component.js"
   }
 }

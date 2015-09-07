@@ -18,59 +18,73 @@ module.exports = component.register('gaia-sub-header', {
     this.setupShadowRoot();
   },
 
-  template: `<div class="inner">
-      <div class="line left"></div>
-      <div class="middle"><content></content></div>
-      <div class="line right"></div>
+  template: `
+    <div class="inner">
+      <div class="line"></div>
+      <div class="text"><content></content></div>
     </div>
 
     <style>
 
     :host {
       display: block;
+      margin: 20px 17px 0 17px;
+      background: var(--background);
     }
 
     .inner {
-      display: flex;
-      margin: 16px 16px 0 16px;
-      align-items: center;
+      position: relative;
+      text-align: center;
+      height: 20px;
     }
 
     .line {
-      position: relative;
+      position: absolute;
+      left: 0;
+      top: 50%;
+
+      display: block;
       height: 2px;
-      flex: 1;
+      width: 100%;
+      margin-top: -1px;
 
       background:
         var(--border-color,
         var(--background-plus));
     }
 
-    .middle {
-      margin: 0 14px 0 14px;
-      padding: 0;
+    .text {
+      position: relative;
+
+      display: inline-block;
+      padding: 0 14px;
+      height: 20px;
+      line-height: 20px;
+
       text-transform: uppercase;
       font-size: 14px;
       font-weight: normal;
-
+      background: var(--background);
       color:
-        var(--title-color);
+        var(--title-color,
+        var(--text-color));
     }
 
     a,
     button {
       position: relative;
+
       display: block;
       -moz-padding-end: 16px;
+
       font: inherit;
       cursor: pointer;
-
       color:
         var(--highlight-color);
     }
 
     /**
-     * .pressed
+     * :active
      */
 
     a:active,
@@ -82,10 +96,11 @@ module.exports = component.register('gaia-sub-header', {
     button:after {
       content: " ";
       position: absolute;
-      width: 0px;
-      height: 0px;
       top: 6px;
       right: 0px;
+
+      width: 0px;
+      height: 0px;
       border-bottom: 8px solid;
       -moz-border-end: 8px solid transparent;
 
