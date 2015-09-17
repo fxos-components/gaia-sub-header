@@ -23,6 +23,6 @@
     "gaia-fonts": "gaia-components/gaia-fonts"
   },
   "dependencies": {
-    "gaia-component": "gaia-components/gaia-component#^0.3.8"
+    "gaia-component": "gaia-components/gaia-component#^0.3.9"
   }
 }
