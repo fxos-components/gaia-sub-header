@@ -10,16 +10,61 @@
 var component = require('gaia-component');
 
 /**
+ * Simple logger (toggle 0)
+ *
+ * @type {Function}
+ */
+var debug = 0 ? console.log.bind(console) : function() {};
+
+/**
  * Exports
  */
 
 module.exports = component.register('gaia-sub-header', {
   created: function() {
     this.setupShadowRoot();
+
+    // Elements
+    this.els = {
+      inner: this.shadowRoot.querySelector('.inner')
+    };
+
+    // Properties
+    this.level = this.getAttribute('level');
+  },
+
+  /**
+   * Known attribute property
+   * descriptors.
+   *
+   * These setters get called when matching
+   * attributes change on the element.
+   *
+   * @type {Object}
+   */
+  attrs: {
+    level: {
+      get: function() {
+        debug('get level');
+        if ('_level' in this) { return this._level; }
+      },
+
+      set: function(value) {
+        debug('set level', value);
+        value = parseInt(value, 10);
+        if (value === this._level || isNaN(value)) {
+          this.els.inner.removeAttribute('aria-level');
+          this._level = null;
+        } else {
+          this.els.inner.setAttribute('aria-level', value);
+          this._level = value;
+        }
+      }
+    }
   },
 
   template: `
-    <div class="inner">
+    <div class="inner" role="heading">
       <div class="line"></div>
       <div class="text"><content></content></div>
     </div>
