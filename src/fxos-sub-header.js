@@ -10,7 +10,7 @@ var component = require('fxos-component');
  *
  * @type {Function}
  */
-var debug = 0 ? console.log.bind(console, '[gaia-sub-header]') : () => {};
+var debug = 0 ? console.log.bind(console, '[fxos-sub-header]') : () => {};
 
 /**
  * Exports

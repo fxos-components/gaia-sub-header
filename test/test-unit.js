@@ -20,14 +20,14 @@ suite('fxos-sub-header', function() {
   /**
    * Test role and aria-level attributes are set correctly inside
    * fxos-sub-header
-   * @param  {Element} gaiaSubHeader sub-header to test
+   * @param  {Element} subHeader sub-header to test
    * @param  {String?} level optional expected aria-level value
    */
-  function testHeadingAttributes(gaiaSubHeader, level) {
+  function testHeadingAttributes(subHeader, level) {
     if (level) {
-      assert.equal(gaiaSubHeader.els.inner.getAttribute('aria-level'), level);
+      assert.equal(subHeader.els.inner.getAttribute('aria-level'), level);
     } else {
-      assert.isFalse(gaiaSubHeader.els.inner.hasAttribute('aria-level'));
+      assert.isFalse(subHeader.els.inner.hasAttribute('aria-level'));
     }
   }
 

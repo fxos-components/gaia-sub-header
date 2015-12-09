@@ -5,7 +5,7 @@
 var assert = require('chai').assert;
 marionette.plugin('helper', require('marionette-helper'));
 
-marionette('gaia-sub-header', function() {
+marionette('fxos-sub-header', function() {
   var client = marionette.client({
     profile: {
       prefs: {
@@ -61,7 +61,7 @@ marionette('gaia-sub-header', function() {
     });
   });
 
-  test('gaia-sub-header is present and visible to the assistive technology',
+  test('fxos-sub-header is present and visible to the assistive technology',
     function() {
       subHeaders.forEach(function(subHeader) {
         // Element is found
@@ -69,7 +69,7 @@ marionette('gaia-sub-header', function() {
         // Element is visible to all (inlcuding assistive technology)
         failOnA11yError(function() {
           assert.isTrue(subHeader.element.displayed());
-        }, 'gaia-sub-header element should be visible both normally and to ' +
+        }, 'fxos-sub-header element should be visible both normally and to ' +
           'assistive technology.');
 
         // Element's .inner element with heading semantics is visible to all
@@ -78,12 +78,12 @@ marionette('gaia-sub-header', function() {
           client.switchToShadowRoot(subHeader.element);
           assert.isTrue(client.findElement('.inner').displayed());
           client.switchToShadowRoot();
-        }, 'gaia-sub-header\'s .inner element with heading semantics should ' +
+        }, 'fxos-sub-header\'s .inner element with heading semantics should ' +
           'be visible both normally and to assistive technology.');
       });
     });
 
-  test('gaia-sub-header\'s optional inner anchor is accessible (no error ' +
+  test('fxos-sub-header\'s optional inner anchor is accessible (no error ' +
     'thrown when clicking and tapping)', function() {
       var link = client.helper.waitForElement('#link');
       ['click', 'tap'].forEach(function(action) {
@@ -98,7 +98,7 @@ marionette('gaia-sub-header', function() {
         //   technology
         failOnA11yError(function() {
           link[action]();
-        }, 'gaia-sub-header\'s optional inner anchor should be clickable and ' +
+        }, 'fxos-sub-header\'s optional inner anchor should be clickable and ' +
           'and tappable including via the assistive technology.');
       });
     });

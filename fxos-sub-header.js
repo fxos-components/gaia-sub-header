@@ -66,7 +66,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 *
 	 * @type {Function}
 	 */
-	var debug = 0 ? console.log.bind(console, '[gaia-sub-header]') : () => {};
+	var debug = 0 ? console.log.bind(console, '[fxos-sub-header]') : () => {};
 
 	/**
 	 * Exports
