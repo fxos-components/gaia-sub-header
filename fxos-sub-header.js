@@ -1,10 +1,10 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("fxosComponent"));
+		module.exports = factory(require("fxos-component"));
 	else if(typeof define === 'function' && define.amd)
-		define(["fxosComponent"], factory);
+		define(["fxos-component"], factory);
 	else if(typeof exports === 'object')
-		exports["FXOSSubHeader"] = factory(require("fxosComponent"));
+		exports["FXOSSubHeader"] = factory(require("fxos-component"));
 	else
 		root["FXOSSubHeader"] = factory(root["fxosComponent"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE_1__) {

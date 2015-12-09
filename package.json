@@ -4,6 +4,7 @@
   "homepage": "https://github.com/fxos-components/fxos-sub-header",
   "license": "MIT",
   "main": "fxos-sub-header.js",
+
   "dependencies": {
     "fxos-component": "^1.0.0"
   },
