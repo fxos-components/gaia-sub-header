@@ -1,10 +1,9 @@
 {
   "name": "fxos-sub-header",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com/fxos-components/fxos-sub-header",
   "license": "MIT",
   "main": "fxos-sub-header.js",
-
   "dependencies": {
     "fxos-component": "^1.0.0"
   },
