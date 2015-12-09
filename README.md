@@ -1,23 +1,22 @@
-# &lt;gaia-sub-header&gt; ![](https://travis-ci.org/gaia-components/gaia-sub-header.svg)  [![devDependency Status](https://david-dm.org/gaia-components/gaia-sub-header/dev-status.svg)](https://david-dm.org/gaia-components/gaia-sub-header#info=devDependencies)
-
+# &lt;fxos-sub-header&gt; ![](https://travis-ci.org/fxos-components/fxos-sub-header.svg)
 
 ## Installation
 
 ```bash
-$ bower install gaia-components/gaia-sub-header
+$ npm install fxos-sub-header
 
 ```
 
 Then include folowing files in HTML
 
 ```html
-<script src="bower_components/gaia-component/gaia-component.js"></script>
-<script src="bower_components/gaia-sub-header/gaia-sub-header.js"></script>
+<script src="node_modules/fxos-component/fxos-component.js"></script>
+<script src="node_modules/fxos-sub-header/fxos-sub-header.js"></script>
 ```
 
 ## Examples
 
-- [Example](http://gaia-components.github.io/gaia-sub-header/)
+- [Example](http://fxos-components.github.io/fxos-sub-header/)
 
 ## Accessibility
 
@@ -25,19 +24,19 @@ Level attribute defines a level of a sub-header within a structure. It helps acc
 learn how deep the header is located within a document or an app.
 
 ```html
-<gaia-sub-header level="3">Sub-Header 3 levels down</gaia-sub-header>
+<fxos-sub-header level="3">Sub-Header 3 levels down</fxos-sub-header>
 ```
 
 ## Usage
 
 ```html
-<gaia-sub-header level="1">Sub-Header</gaia-sub-header>
+<fxos-sub-header level="1">Sub-Header</fxos-sub-header>
 ```
 
 Header with link
 
 ```html
-<gaia-sub-header level="2"><a href="#">Gaia Sub-Header Link</a></gaia-sub-header>
+<fxos-sub-header level="2"><a href="#">Gaia Sub-Header Link</a></fxos-sub-header>
 ```
 
 ## Tests

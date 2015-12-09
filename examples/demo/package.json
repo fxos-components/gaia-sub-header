@@ -1,0 +1,9 @@
+{
+  "name": "demo",
+  "main": "index.html",
+  "dependencies": {
+    "fxos-font": "^1.0.0",
+    "fxos-sub-header": "../..",
+    "fxos-theme": "^2.0.1"
+  }
+}
