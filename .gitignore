@@ -1,6 +1,7 @@
 bower_components
 firefox
 node_modules
+!examples/demo/node_modules
 .DS_Store
 marionette-mocha-gecko.log
 npm-debug.log

@@ -1,11 +1,12 @@
 {
-  "name": "gaia-sub-header",
+  "name": "fxos-sub-header",
   "version": "0.4.1",
-  "homepage": "https://github.com/gaia-components/gaia-subheader",
+  "homepage": "https://github.com/fxos-components/fxos-subheader",
   "authors": [
-    "rnowm <arnau@arnaumarch.com>"
+    "rnowm <arnau@arnaumarch.com>",
+    "Wilson page <wilsonpage@me.com>"
   ],
-  "main": "gaia-sub-header.js",
+  "main": "fxos-sub-header.js",
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -15,14 +16,10 @@
     "tests",
     "index.html",
     "package.json",
+    "webpack.config.js"
     "README.md"
   ],
-  "devDependencies": {
-    "base": "gaia-components/base",
-    "gaia-theme": "gaia-components/gaia-theme",
-    "gaia-fonts": "gaia-components/gaia-fonts"
-  },
   "dependencies": {
-    "gaia-component": "gaia-components/gaia-component#^0.3.9"
+    "fxos-component": "fxos-components/fxos-component#^1.0.0"
   }
 }

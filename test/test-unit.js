@@ -1,6 +1,6 @@
 /* jshint maxlen:120 */
 /* global sinon, suite, setup, teardown, test, sh, sh1, sh2, sh3, sh4, assert */
-suite('GaiaSubHeader', function() {
+suite('fxos-sub-header', function() {
   'use strict';
 
   var accessibility = window['test-utils'].accessibility;
@@ -19,7 +19,7 @@ suite('GaiaSubHeader', function() {
 
   /**
    * Test role and aria-level attributes are set correctly inside
-   * gaia-sub-header
+   * fxos-sub-header
    * @param  {Element} gaiaSubHeader sub-header to test
    * @param  {String?} level optional expected aria-level value
    */
@@ -49,13 +49,13 @@ suite('GaiaSubHeader', function() {
      * the component.
      */
 
-    test('Check that in their default states gaia-sub-headers pass all ' +
+    test('Check that in their default states fxos-sub-headers pass all ' +
       'accessibility checks mentioned above', function(done) {
       this.dom.innerHTML = `
-        <gaia-sub-header id="sh1" level="1">SUB-HEADER</gaia-sub-header>
-        <gaia-sub-header id="sh2" level="1"><a href="#">SUB-HEADER-LINK</a></gaia-sub-header>
-        <gaia-sub-header id="sh3" level="1"><button>SUB-HEADER-BUTTON</button></gaia-sub-header>
-        <gaia-sub-header id="sh4" level="not_supported">SUB-HEADER-BAD-LEVEL</gaia-sub-header>
+        <fxos-sub-header id="sh1" level="1">SUB-HEADER</fxos-sub-header>
+        <fxos-sub-header id="sh2" level="1"><a href="#">SUB-HEADER-LINK</a></fxos-sub-header>
+        <fxos-sub-header id="sh3" level="1"><button>SUB-HEADER-BUTTON</button></fxos-sub-header>
+        <fxos-sub-header id="sh4" level="not_supported">SUB-HEADER-BAD-LEVEL</fxos-sub-header>
       `;
       [sh1, sh2, sh3].forEach(sh => testHeadingAttributes(sh, '1'));
       testHeadingAttributes(sh4);
@@ -63,9 +63,9 @@ suite('GaiaSubHeader', function() {
     });
 
     test('Check that when level attribute is updated dynamically ' +
-      'gaia-sub-header passes all accessibility checks mentioned above',
+      'fxos-sub-header passes all accessibility checks mentioned above',
       function(done) {
-        this.dom.innerHTML = '<gaia-sub-header id="sh">SUB-HEADER</gaia-sub-header>';
+        this.dom.innerHTML = '<fxos-sub-header id="sh">SUB-HEADER</fxos-sub-header>';
         testHeadingAttributes(sh);
         accessibility.check(this.dom)
           .then(() => {
